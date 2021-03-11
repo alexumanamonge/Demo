@@ -1,7 +1,7 @@
 # This workflow will inspect a pull request to ensure there is a linked issue or a
 # valid issue is mentioned in the body. If neither is present it fails the check and adds
 # a comment alerting users of this missing requirement.
-name: VerifyIssue
+name: VerifyIssueDevOps
 
 on:
   pull_request:
@@ -11,7 +11,7 @@ on:
 jobs:
   verify_linked_issue:
     runs-on: ubuntu-latest
-    name: Ensure Pull Request has a linked issue.
+    name: Ensure Pull Request has a linked Story in Azure Boards.
     steps:
       - name: Verify Linked Issue
         uses: emagers/ab-story-validation-action@v0.1.0
